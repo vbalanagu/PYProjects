@@ -5,7 +5,7 @@ from requests.auth import HTTPBasicAuth
 import json
 
 url = "https://tvasavi.atlassian.net/rest/api/3/project"
-API_TOKEN = "ATATT3xFfGF05oRCaIE1dirgeK-_4cbiCp4ZqUbTFsZBFqMntBjqw2fcz1F6oY5yWm0EUSdblnLdBLx3rsrO4yBtx0heEPTf9dpKZr6-NURgPdJASxYwwPxL4_VJtbfCkQXRBt-VQdjOMlVhOJmLFz93mtlxqW15VIHTlxCE8hcQYdAV52S1WWE=66E960BF"
+API_TOKEN = "ATATT3xFfGF0UuWP4geyj0h55SJoMxYkxtfShKYBf8PqoQybZ1CBB4RjyT-KJEDMtJRhEUfyslWAEJcR3ckkNoPZheUZ5tYx31UCRAc6p2cq0e2ozdkKzTqdbhtSCWLLDu38R-GqIBQL964Yvq35fTDzhMm75jEbASisM-_iAjAoHd1OV7tz9FU=D5C6E7EA"
 
 auth = HTTPBasicAuth("vasavi.balanagu@gmail.com", API_TOKEN)
 
@@ -21,5 +21,4 @@ response = requests.request(
 )
 
 output = json.loads(response.text)
-name = output[0]["name"]
-print(name)
+print(output[0]["name"]) #To print project name
